@@ -1880,3 +1880,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+.button linkedin{
+  display: flex; /* This ensures the contents are in a flexbox layout */
+    align-items: center; /* This aligns the items vertically in the center */
+    gap: 8px;
+}
+
+.button linkedin ion-icon {
+  display: inline-block; /* Ensures the icon is inline */
+  vertical-align: middle; /* Aligns the icon vertically with the text */
+}
