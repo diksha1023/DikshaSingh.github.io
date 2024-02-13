@@ -1180,7 +1180,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn {
   position: relative;
-  width: 100%;
+  width: auto;
   background: var(--border-gradient-onyx);
   color: var(--orange-yellow-crayola);
   display: flex;
@@ -1194,6 +1194,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   box-shadow: var(--shadow-3);
   z-index: 1;
   transition: var(--transition-1);
+  margin-left: 0;
 }
 
 .form-btn::before {
