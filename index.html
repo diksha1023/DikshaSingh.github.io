@@ -1198,6 +1198,8 @@
   -->
   <script src="./assets/js/script.js"></script>
 
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) {successFunction();}"></iframe>
+
   <!--
     - ionicon link
   -->
@@ -1207,28 +1209,35 @@
     document.addEventListener("DOMContentLoaded", function () {
 
       const form = document.getElementById("gform");
-
+      window.submitted = false;
       // Add an event listener for the form submit event
       form.addEventListener("submit", function (e) {
       // Prevent the default form submission behavior-->
-        e.preventDefault();
+        // e.preventDefault();
 
-        
+        window.submitted = true;
       // Assuming your form fields have unique IDs, you can clear them like this:-->
-        document.getElementById("entry.562754078").value = ""; // Clear full name-->
-        document.getElementById("entry.2013501142").value = ""; // Clear email-->
-        document.getElementById("entry.72549489").value = ""; // Clear message-->
+        // document.getElementById("entry.562754078").value = ""; // Clear full name-->
+        // document.getElementById("entry.2013501142").value = ""; // Clear email-->
+        // document.getElementById("entry.72549489").value = ""; // Clear message-->
 
         // Display a submission confirmation popup or message-->
-        alert("Form submitted successfully!");
+        // alert("Form submitted successfully!");
 
         // Optionally, you can reset the form (clearing all fields)-->
-        form.reset();
+        // form.reset();
 
         // Optionally, you can redirect the user to a thank you page-->
         // window.location.href = "thank-you.html";-->
       });
     });
+
+    function successFunction() {
+    alert("Form submitted successfully!");
+    document.getElementById("gform").reset(); // Reset the form after submission
+    window.submitted = false; // Reset submission flag
+    // Optionally redirect the user or display further messages
+  }
   </script>
 </body>
 
